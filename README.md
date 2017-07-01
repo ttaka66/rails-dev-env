@@ -1,24 +1,35 @@
-# README
+# Rails environment by docker-compose
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Usage
 
-Things you may want to cover:
+### Build(bundle install/update)
 
-* Ruby version
+```bash
+$ docker-compose build
+```
 
-* System dependencies
+### Start
 
-* Configuration
+```bash
+$ docker-compose up -d
+```
 
-* Database creation
+### Stop
 
-* Database initialization
+```bash
+$ docker-compose stop
+```
 
-* How to run the test suite
+### Command
 
-* Services (job queues, cache servers, search engines, etc.)
+```bash
+$ docker-compose exec app {command}
+```
 
-* Deployment instructions
+e.g. $docker-compose exec app rake db:create
 
-* ...
+### Confirm logs
+
+```bash
+$ docker-compose logs -f app
+```
